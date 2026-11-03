@@ -4,7 +4,7 @@ const { getQuestion, submitScore, getLeaderboard } = require('../controllers/gam
 const authMiddleware = require('../middleware/auth');
 
 router.get('/question', authMiddleware, getQuestion);
-router.post('/score', authMiddleware, submitScore);
+router.post('/score', submitScore);
 router.get('/leaderboard', getLeaderboard);
 
 module.exports = router;
